@@ -8,9 +8,23 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgba(7, 8, 21, 0.77);
+      color: white;
     }
     thead, th, td {
       padding-left: 70px;
+    }
+
+    .logout-button {
+      background-color: #960000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 30px;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -50,6 +64,11 @@
     </tbody>
    </table>
   <% } %>
+
+  <form action="/user/logout" method="post" >
+    <input class="logout-button" type="submit" value="Logout">
+  </form>
+
 
 </body>
 
